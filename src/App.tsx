@@ -3,7 +3,7 @@ import {Menu} from "./components/Menu/Menu";
 //import {TodosPage} from "./pages/TodosPage";
 import {AboutPage} from "./pages/AboutPage";
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import {IconImage} from "./components/IconsGroup/IconImage";
+import {IconImage} from "./components/IconsImage/IconImage";
 import {MainPage} from "./pages/MainPage";
 
 const App: React.FC = () => { //FC - function component

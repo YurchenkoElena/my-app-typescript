@@ -1,6 +1,7 @@
 import React from "react";
 import './Banner.css'
 import {Sizes, Title} from "../Title/Title";
+import {IconImage} from "../IconsImage/IconImage";
 
 interface IBannerProps {
     src: string
@@ -18,6 +19,7 @@ export const Banner: React.FC<IBannerProps> = (props) => {
         }}>
             <div className={'container'}>
                 <Title color={'white'} main={true} size={Sizes.fifty}>Everything You Love About Coffee</Title>
+                <IconImage color={'white'}></IconImage>
                 <p>sdvdsvdc</p>
                 <button>Edd</button>
             </div>
