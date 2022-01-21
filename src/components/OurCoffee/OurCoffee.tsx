@@ -24,7 +24,7 @@ export const OurCoffee: React.FC = () => {
         <div className="our-coffee">
             {
                 // @ts-ignore
-                dates.map(data => <CoffeeCard key={data.id} data={data} />)
+                dates.map(data => <CoffeeCard key={data.id} {...data} />)
             }
 
         </div>
