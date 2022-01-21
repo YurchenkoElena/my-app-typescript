@@ -7,10 +7,10 @@ export const CoffeeCard: React.FC<ICoffeeCardType> = (props) => {
     const { image, title, description, price } = props;
     return (
         <div className="coffee-card-wrapper">
-            <img src={image}></img>
+            <img src={image} alt={'coffee-image'}/>
             <div className="coffee-card-info">
                 <PElement appointment='title'>{title}</PElement>
-                <PElement appointment='description '>{description}</PElement>
+                <PElement appointment='description'>{description}</PElement>
                 <PElement appointment='price'>{price} $</PElement>
             </div>
         </div>

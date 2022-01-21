@@ -1,5 +1,6 @@
 import React from "react";
 import './Button.css'
+import {useNavigate} from "react-router-dom";
 
 interface IButtonProps {
     isTransparent: 'transparent' | 'white'
@@ -7,8 +8,10 @@ interface IButtonProps {
 
 export const Button: React.FC<IButtonProps> = (props) => {
 
+    const history = useNavigate()
+
     return (
-        <button className={`button-${props.isTransparent}`}> {props.children}
+        <button onClick={()=>{history('/your-pleasure')}} className={`button-${props.isTransparent}`}> {props.children}
         </button>
     )
 }
