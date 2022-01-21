@@ -2,6 +2,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    width: 34px;
 }
 
 .icon-block:before {
