@@ -27,7 +27,6 @@ export const BlockTitleAndText: React.FC<ITitleProps> = (props) => {
                         <Text size={SizesText.normal} color={Colors.black} text={props.text}/>
                     </div>
 
-
                     :
                     <>
                         <Title mainPage={false} color={Colors.black} size={SizesTitle.thirty} title={props.title}/>

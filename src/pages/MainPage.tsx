@@ -19,7 +19,7 @@ export const MainPage: React.FC = () => {
     return (
         <div className={'front-page'}>
             <Banner src={bannerScr} isFront={true} onlyTitle={false} text={'Everything You Love About Coffee'}/>
-            <BlockTitleAndText text={text} title = {'About Us'}/>
+            <BlockTitleAndText text={text} title = {'About Us'} hasImage={false}/>
         </div>
     )
 }

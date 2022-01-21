@@ -1,0 +1,13 @@
+.title {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.description {
+
+}
+
+.price {
+    font-weight: 700;
+    text-align: right;
+}

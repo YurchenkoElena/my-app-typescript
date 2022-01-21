@@ -1,6 +1,6 @@
 import React from "react";
 import {ICoffeeCardType} from "../../types/interfaces";
-
+import {PElement} from "../PElement/PElement";
 
 // @ts-ignore
 export const CoffeeCard: React.FC<ICoffeeCardType> = ({data}) => {
@@ -10,9 +10,9 @@ export const CoffeeCard: React.FC<ICoffeeCardType> = ({data}) => {
         <div className="coffee-card-wrapper">
             <img src={image}></img>
             <div className="coffee-card-info">
-                <p>{title}</p>
-                <p>{description}</p>
-                <p>{price} $</p>
+                <PElement appointment='title'>{title}</PElement>
+                <PElement appointment='description '>{description}</PElement>
+                <PElement appointment='price'>{price} $</PElement>
             </div>
         </div>
     )
