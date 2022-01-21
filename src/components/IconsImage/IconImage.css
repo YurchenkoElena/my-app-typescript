@@ -1,6 +1,7 @@
 .icon-block {
     position: relative;
     display: flex;
+    justify-content: center;
 }
 
 .icon-block:before {
@@ -31,4 +32,10 @@
 .icon-block.icon-white:before,
 .icon-block.icon-white:after{
     background-color: white;
+}
+
+.icon-block.icon-white img,
+.icon-block.icon-black img{
+    width: 35px;
+    height: 35px;
 }

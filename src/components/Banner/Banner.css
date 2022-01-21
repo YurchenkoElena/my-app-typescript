@@ -1,7 +1,15 @@
 .front-page .banner{
- height: 500px;
+ height: 600px;
  display: flex;
  justify-content: center;
  align-items: center;
  text-align: center;
 }
+
+.front-page .banner .container{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+

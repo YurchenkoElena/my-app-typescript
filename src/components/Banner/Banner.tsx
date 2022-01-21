@@ -1,7 +1,9 @@
 import React from "react";
 import './Banner.css'
-import {Sizes, Title} from "../Title/Title";
 import {IconImage} from "../IconsImage/IconImage";
+import {Colors, SizesText, SizesTitle} from "../../enums/enum";
+import {Title} from "../Title/Title";
+import {Text} from "../Text/Text";
 
 interface IBannerProps {
     src: string
@@ -18,9 +20,13 @@ export const Banner: React.FC<IBannerProps> = (props) => {
             backgroundRepeat: 'no-repeat'
         }}>
             <div className={'container'}>
-                <Title color={'white'} main={true} size={Sizes.fifty}>Everything You Love About Coffee</Title>
-                <IconImage color={'white'}></IconImage>
-                <p>sdvdsvdc</p>
+                <Title color={Colors.white} mainPage={true} size={SizesTitle.fifty}>Everything You Love About
+                    Coffee</Title>
+                <IconImage color={'white'}/>
+                <Text size={SizesText.big} color={Colors.white}>We makes every day full of energy and taste
+                    <br/>
+                    Want to try our beans?
+                </Text>
                 <button>Edd</button>
             </div>
         </div>

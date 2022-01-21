@@ -1,0 +1,17 @@
+.text-white {
+    color: white;
+}
+
+.text-black {
+    color: black;
+}
+
+.text-30 {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.text-20 {
+    font-size: 20px;
+    line-height: 25px;
+}
