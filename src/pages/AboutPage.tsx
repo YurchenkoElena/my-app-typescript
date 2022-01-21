@@ -1,20 +1,25 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {OurCoffee} from "../components/OurCoffee/OurCoffee";
+import {Banner} from "../components/Banner/Banner";
+import {BlockTitleAndText} from "../components/BlockTitleAndText/BlockTitleAndText";
+const imageMain = require("../images/coffee-shop.png")
+const image = require("../images/girl.jpg")
+const text = 'Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.\n' +
+    '\n' +
+    'Afraid at highly months do things on at. Situation recommend objection do intention\n' +
+    'so questions. \n' +
+    'As greatly removed calling pleased improve an. Last ask him cold feel\n' +
+    'met spot shy want. Children me laughing we prospect answered followed. At it went\n' +
+    'is song that held help face.'
 
 export const AboutPage: React.FC = () => {
 
-    const navigate = useNavigate();
-
     return (
-        <>
-            {/*<h3>About us</h3>*/}
-            {/*<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.*/}
-            {/*    Ab aliquid consequatur distinctio dolorem doloribus fuga hic*/}
-            {/*    nulla possimus recusandae, suscipit!</p>*/}
-            {/*<button className="btn" onClick={() => navigate('/todo-list', { replace: true })}>Back to Your todo list</button>*/}
+        <div className={'inside-page'}>
+           <Banner src={imageMain} text={'Our Coffee'} onlyTitle={true} isFront={false}/>
+            <BlockTitleAndText text={text} title={'About our beans'} hasImage={true} srcImage={image}/>
             <OurCoffee />
-        </>
-
+        </div>
     )
 }
