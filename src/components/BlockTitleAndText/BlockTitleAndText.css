@@ -16,6 +16,11 @@
     margin-right: 25px;
 }
 
+.title-text{
+    padding-bottom: 25px;
+    border-bottom: 1px solid black;
+}
+
 .title-text.container .with-image .right-content{
     display: flex;
     align-items: center;
