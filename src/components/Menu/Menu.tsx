@@ -12,7 +12,8 @@ export const Menu: React.FC<IMenuProps> = (props) => {
         <div className={'menu'}>
             <MenuLink linkHref={'/'} srcImage ={props.color === 'white' && iconWhite || props.color === 'black' && iconBlack} color={props.color}>Coffee house</MenuLink>
             <MenuLink linkHref={'/coffee'} color={props.color}>Coffee</MenuLink>
-            <MenuLink linkHref={'/your-pleasure'} color={props.color}>For your pleasure</MenuLink>
+            <MenuLink color={props.color} linkHref={'/your-pleasure'}>For your pleasure</MenuLink>
+            <MenuLink color={props.color} linkHref={'/todo-list'}>Your Todo List</MenuLink>
         </div>
     )
 }
