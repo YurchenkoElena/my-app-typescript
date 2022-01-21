@@ -18,7 +18,7 @@ export const ForYourPage: React.FC = (props) => {
         <div className={'inside-page'}>
             <Banner isFront={false} src={image} onlyTitle={true} text={'For your pleasure'}/>
             <BlockTitleAndText text={text} title={'About our goods'} hasImage={true} srcImage={blockImage}/>
-            <OurCoffee/>
+            <OurCoffee sliceSize={0}/>
         </div>
 
     )

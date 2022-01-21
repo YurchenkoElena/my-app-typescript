@@ -5,7 +5,11 @@ import {CoffeeCard} from "../CoffeeCard/CoffeeCard";
 
 import './OurCoffee.css'
 
-export const OurCoffee: React.FC = () => {
+interface IOurCoffeeProps{
+    sliceSize:number
+}
+
+export const OurCoffee: React.FC<IOurCoffeeProps> = (props) => {
 
     const [dates, setDates] = useState([] as Array<ICoffeeCardType>);
 
@@ -24,7 +28,9 @@ export const OurCoffee: React.FC = () => {
         <div className="our-coffee">
             <div className={'container'}>
                 {
-                    dates.map(data => <CoffeeCard key={data.id} {...data} />)
+                    //dates.map(data => <CoffeeCard key={data.id} {...data} />)
+
+                    dates.slice(props.sliceSize, dates.length).map(data => <CoffeeCard key={data.id} {...data} />)
                 }
             </div>
         </div>

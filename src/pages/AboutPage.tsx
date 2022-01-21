@@ -19,7 +19,7 @@ export const AboutPage: React.FC = () => {
         <div className={'inside-page'}>
            <Banner src={imageMain} text={'Our Coffee'} onlyTitle={true} isFront={false}/>
             <BlockTitleAndText text={text} title={'About our beans'} hasImage={true} srcImage={image}/>
-            <OurCoffee />
+            <OurCoffee sliceSize={0}/>
         </div>
     )
 }

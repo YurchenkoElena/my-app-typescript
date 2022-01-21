@@ -26,7 +26,7 @@ export const MainPage: React.FC = () => {
             <BlockTitleAndText text={text} title={'About Us'} hasImage={false}/>
             <div className={'coffee-section'}>
                 <Title title={'Our Best'} size={SizesTitle.thirty} color={Colors.black} mainPage={false}/>
-                <OurCoffee/>
+                <OurCoffee sliceSize={3}/>
             </div>
 
         </div>
