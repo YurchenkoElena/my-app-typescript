@@ -19,13 +19,9 @@ export const CoffeeCard: React.FC<ICoffeeCardType> = (props) => {
     }
 
     return (
-<<<<<<< HEAD
         <div className="coffee-card-wrapper" onClick={handleClick}>
             <img src={image}></img>
-=======
-        <div className="coffee-card-wrapper">
-            <img src={image} alt={'coffee-image'}/>
->>>>>>> 69a64cdfde4c51fc5b56ded006c14e7e688b7d80
+
             <div className="coffee-card-info">
                 <PElement appointment='title'>{title}</PElement>
                 <PElement appointment='description'>{description}</PElement>
