@@ -12,6 +12,7 @@ import {useNavigate} from "react-router-dom";
 export const CoffeeSingleInfo: React.FC<ICoffeeCardType> = (props) => {
 
     const {image, description, title, price, country} = props;
+
     return (
         <div className="coffee-single-info">
             <div className="image-wrapper">

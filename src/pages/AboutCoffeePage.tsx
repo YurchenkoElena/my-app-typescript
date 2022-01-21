@@ -6,6 +6,7 @@ import {CoffeeSingleInfo} from "../components/CoffeeSingleInfo/CoffeeSingleInfo"
 
 export const AboutCoffeePage: React.FC = (props) => {
 
+    // @ts-ignore
     const coffee = useSelector(state => state.coffeeitem.currentCoffeeItem);
 
     return (

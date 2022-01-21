@@ -4,6 +4,12 @@
     justify-content: center;
 }
 
+@media screen and (max-width: 1500px) {
+    .our-coffee .container {
+        justify-content: space-between;
+    }
+}
+
 .coffee-card-wrapper {
     width: 300px;
     height: auto;
@@ -13,6 +19,12 @@
     box-shadow: 0 0 8px 6px rgba(34, 60, 80, 0.09);
     padding: 35px 25px;
     background: rgba(255, 255, 255, 0.65);
+}
+
+@media screen and (max-width: 1500px) {
+    .coffee-card-wrapper {
+        margin-right: 0;
+    }
 }
 
 .coffee-card-wrapper:nth-child(3n) {
