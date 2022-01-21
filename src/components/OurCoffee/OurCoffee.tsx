@@ -1,21 +1,32 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {getData} from "../../api/api";
 import {ICoffeeCardType} from "../../types/interfaces";
+import {CoffeeCard} from "../CoffeeCard/CoffeeCard";
+
+import './our-coffee.css'
 
 export const OurCoffee: React.FC = () => {
 
-    let initialState = {
-        datas: [] as Array<ICoffeeCardType>
+    const [dates, setDates] = useState([] as Array<ICoffeeCardType>);
+
+    const ourCoffeeBlock = () => {
+        getData()
+            .then(onDatesLoaded)
     }
 
-    const [datas, setDatas] = useState(initialState);
+    const onDatesLoaded = (results: any) => {
+        setDates(results);
+    }
+
+    useEffect( ourCoffeeBlock, []);
 
     return (
-        <>
+        <div className="our-coffee">
             {
-                console.log(getData().then())
+                // @ts-ignore
+                dates.map(data => <CoffeeCard key={data.id} data={data} />)
             }
-           {/*// {datas.map(data => console.log(data))}*/}
-        </>
+
+        </div>
     )
 }
