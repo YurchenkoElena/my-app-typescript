@@ -62,13 +62,26 @@ code {
     margin-top: 60px;
     position: fixed;
     width: 100%;
+    z-index: 100;
 }
 
 .footer .container {
     flex-direction: column;
 }
 
-#root{
+.footer {
+    padding: 40px 0;
+}
+
+.footer .menu.scrolled {
+    background-color: transparent;
+}
+
+.footer .menu {
+    margin-bottom: 20px;
+}
+
+#root {
     margin-top: -42px;
     font-family: 'Dancing Script', cursive;
 }

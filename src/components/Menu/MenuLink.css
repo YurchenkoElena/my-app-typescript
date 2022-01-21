@@ -8,7 +8,11 @@
 .menu a {
     margin-right: 40px;
 }
+.menu {
+    transition: all 0.3s ease-in;
+}
 
 .menu.scrolled{
     background-color: #ff00003d;
+    transition: all 0.3s ease-in;
 }
