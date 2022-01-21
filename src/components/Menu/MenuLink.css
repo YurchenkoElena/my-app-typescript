@@ -1,0 +1,11 @@
+.menu a.color-white{
+    color: white;
+}
+.menu a.color-black{
+    color: black;
+}
+
+
+.menu a {
+    margin-right: 40px;
+}

@@ -59,15 +59,16 @@ code {
     margin: 0 auto;
 }
 
-.menu a {
-    margin-right: 40px;
-    color: #000;
-}
-
 .header {
-    padding-top: 30px;
+    margin-top: 60px;
+    position: fixed;
+    width: 100%;
 }
 
 .footer .container {
     flex-direction: column;
+}
+
+#root{
+    margin-top: -42px;
 }

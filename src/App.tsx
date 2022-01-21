@@ -1,9 +1,10 @@
 import React from 'react';
 import {Menu} from "./components/Menu/Menu";
-import {TodosPage} from "./pages/TodosPage";
+//import {TodosPage} from "./pages/TodosPage";
 import {AboutPage} from "./pages/AboutPage";
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import {IconImage} from "./components/IconsGroup/IconImage";
+import {MainPage} from "./pages/MainPage";
 
 const App: React.FC = () => { //FC - function component
 
@@ -11,20 +12,19 @@ const App: React.FC = () => { //FC - function component
         <Router>
             <div className="header">
                 <div className={'container'}>
-                    <Menu/>
+                    <Menu color={'white'}/>
                 </div>
-
             </div>
-            <div className="container">
+            <div className="main-content">
                 <Routes>
-                    <Route path="/coffee-house" element={<TodosPage/>}/>
+                    <Route path="/" element={<MainPage/>}/>
                     <Route path="/coffee" element={<AboutPage/>}/>
                     <Route path="/your-pleasure" element={null}/>
                 </Routes>
             </div>
             <div className="footer">
                 <div className={'container'}>
-                    <Menu/>
+                    <Menu color={'black'}/>
                     <IconImage color={'black'}/>
                 </div>
             </div>
