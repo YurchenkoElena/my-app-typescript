@@ -1,0 +1,34 @@
+.icon-block {
+    position: relative;
+    display: flex;
+}
+
+.icon-block:before {
+    content: '';
+    width: 82px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: -94px;
+}
+
+.icon-block:after {
+    content: '';
+    width: 82px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: 43px;
+}
+
+.icon-block.icon-black:before,
+.icon-block.icon-black:after{
+    background-color: black;
+}
+
+.icon-block.icon-white:before,
+.icon-block.icon-white:after{
+    background-color: white;
+}
