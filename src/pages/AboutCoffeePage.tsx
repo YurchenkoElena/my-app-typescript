@@ -11,7 +11,7 @@ export const AboutCoffeePage: React.FC = (props) => {
 
     return (
         <div className="coffeeitem-page">
-            <CoffeeSingleInfo id={coffee.id} title={coffee.title} price={coffee.price} description={coffee.description} country={coffee.country} image={coffee.image} />
+            <CoffeeSingleInfo {...coffee} />
         </div>
 
     )
