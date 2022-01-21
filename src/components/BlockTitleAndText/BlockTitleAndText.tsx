@@ -22,11 +22,12 @@ export const BlockTitleAndText: React.FC<ITitleProps> = (props) => {
                         <div className={'left-image'}>
                             <img src={props.srcImage} alt={'image'}/>
                         </div>
-                        <Title mainPage={false} color={Colors.black} size={SizesTitle.thirty} title={props.title}/>
-                        <IconImage color={Colors.black}/>
-                        <Text size={SizesText.normal} color={Colors.black} text={props.text}/>
+                        <div className={'right-content'}>
+                            <Title mainPage={false} color={Colors.black} size={SizesTitle.thirty} title={props.title}/>
+                            <IconImage color={Colors.black}/>
+                            <Text size={SizesText.normal} color={Colors.black} text={props.text}/>
+                        </div>
                     </div>
-
                     :
                     <>
                         <Title mainPage={false} color={Colors.black} size={SizesTitle.thirty} title={props.title}/>

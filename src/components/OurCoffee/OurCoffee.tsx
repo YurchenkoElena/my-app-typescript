@@ -21,7 +21,7 @@ export const OurCoffee: React.FC = () => {
     useEffect( ourCoffeeBlock, []);
 
     return (
-        <div className="our-coffee">
+        <div className="our-coffee container">
             {
                 // @ts-ignore
                 dates.map(data => <CoffeeCard key={data.id} data={data} />)

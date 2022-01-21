@@ -1,7 +1,6 @@
 .our-coffee {
     display: flex;
     flex-wrap: wrap;
-    margin: 30px 150px;
     justify-content: center;
 }
 
@@ -11,7 +10,7 @@
     border-radius: 8px;
     margin-right: 70px;
     margin-top: 60px;
-    box-shadow: 0px 0px 8px 6px rgba(34, 60, 80, 0.09);
+    box-shadow: 0 0 8px 6px rgba(34, 60, 80, 0.09);
     padding: 35px 25px;
 }
 

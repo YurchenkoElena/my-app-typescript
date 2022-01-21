@@ -1,6 +1,7 @@
 import React from "react";
 import {Banner} from "../components/Banner/Banner";
 import {BlockTitleAndText} from "../components/BlockTitleAndText/BlockTitleAndText";
+import {OurCoffee} from "../components/OurCoffee/OurCoffee";
 const bannerScr =  require("../images/desk.png")
 const text = 'Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.\n' +
     'Afraid at highly months do things on at. Situation recommend objection do intention\n' +
@@ -20,6 +21,7 @@ export const MainPage: React.FC = () => {
         <div className={'front-page'}>
             <Banner src={bannerScr} isFront={true} onlyTitle={false} text={'Everything You Love About Coffee'}/>
             <BlockTitleAndText text={text} title = {'About Us'} hasImage={false}/>
+            <OurCoffee/>
         </div>
     )
 }
