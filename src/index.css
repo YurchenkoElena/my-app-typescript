@@ -50,7 +50,6 @@ code {
 }
 
 .menu, .footer .container {
-    font-family: 'Dancing Script', cursive;
     font-size: 23px;
     line-height: 40px;
     display: flex;
@@ -71,4 +70,5 @@ code {
 
 #root{
     margin-top: -42px;
+    font-family: 'Dancing Script', cursive;
 }
