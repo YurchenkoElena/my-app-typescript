@@ -7,8 +7,10 @@ import aromisto from './../../images/cofee-image.jpg'
 import {Text} from "../Text/Text";
 import {Colors, SizesText} from "../../enums/enum";
 import {IconImage} from "../IconsImage/IconImage";
+import {useNavigate} from "react-router-dom";
 
 export const CoffeeSingleInfo: React.FC<ICoffeeCardType> = (props) => {
+
     const {image, description, title, price, country} = props;
     return (
         <div className="coffee-single-info">

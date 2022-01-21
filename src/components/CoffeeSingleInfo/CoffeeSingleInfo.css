@@ -10,7 +10,7 @@
     box-shadow: 0px 5px 21px 3px rgba(34, 60, 80, 0.45);
 }
 
-.coffee-card-info {
+.coffeeitem-page  .coffee-card-info {
     display: flex;
     flex-direction: column;
     align-items: center;
