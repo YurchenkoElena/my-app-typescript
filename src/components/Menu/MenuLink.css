@@ -8,3 +8,7 @@
 .menu a {
     margin-right: 40px;
 }
+
+.menu.scrolled{
+    background-color: #ff00003d;
+}
