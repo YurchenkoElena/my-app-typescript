@@ -1,7 +1,11 @@
 import React from "react";
 import {Banner} from "../components/Banner/Banner";
 import {BlockTitleAndText} from "../components/BlockTitleAndText/BlockTitleAndText";
-const bannerScr =  require("../images/desk.png")
+import {OurCoffee} from "../components/OurCoffee/OurCoffee";
+import {Title} from "../components/Title/Title";
+import {Colors, SizesTitle} from "../enums/enum";
+
+const bannerScr = require("../images/desk.png")
 const text = 'Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.\n' +
     'Afraid at highly months do things on at. Situation recommend objection do intention\n' +
     'so questions. As greatly removed calling pleased improve an. Last ask him cold feel\n' +
@@ -19,7 +23,12 @@ export const MainPage: React.FC = () => {
     return (
         <div className={'front-page'}>
             <Banner src={bannerScr} isFront={true} onlyTitle={false} text={'Everything You Love About Coffee'}/>
-            <BlockTitleAndText text={text} title = {'About Us'} hasImage={false}/>
+            <BlockTitleAndText text={text} title={'About Us'} hasImage={false}/>
+            <div className={'coffee-section'}>
+                <Title title={'Our Best'} size={SizesTitle.thirty} color={Colors.black} mainPage={false}/>
+                <OurCoffee sliceSize={3}/>
+            </div>
+
         </div>
     )
 }

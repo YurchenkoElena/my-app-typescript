@@ -5,3 +5,26 @@
     flex-direction: column;
     padding: 80px 0;
 }
+
+.title-text.container .with-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-text.container .with-image .left-image{
+    margin-right: 25px;
+}
+
+.title-text{
+    padding-bottom: 25px;
+    margin-bottom: 80px;
+    border-bottom: 1px solid black;
+}
+
+.title-text.container .with-image .right-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
