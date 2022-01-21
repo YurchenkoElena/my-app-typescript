@@ -8,6 +8,7 @@ export const Menu: React.FC = (x) => {
             <MenuLink linkHref={'/coffee-house'} srcImage ={icon} >Coffee house</MenuLink>
             <MenuLink linkHref={'/coffee'}>Coffee</MenuLink>
             <MenuLink linkHref={'/your-pleasure'}>For your pleasure</MenuLink>
+            <MenuLink linkHref={'/todo-list'}>Your Todo List</MenuLink>
         </div>
     )
 }

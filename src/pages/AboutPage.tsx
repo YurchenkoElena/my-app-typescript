@@ -11,7 +11,7 @@ export const AboutPage: React.FC = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Ab aliquid consequatur distinctio dolorem doloribus fuga hic
                 nulla possimus recusandae, suscipit!</p>
-            <button className="btn" onClick={() => navigate('/', { replace: true })}>Обратно к списку дел</button>
+            <button className="btn" onClick={() => navigate('/todo-list', { replace: true })}>Back to Your todo list</button>
         </>
 
     )

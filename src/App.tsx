@@ -17,9 +17,10 @@ const App: React.FC = () => { //FC - function component
             </div>
             <div className="container">
                 <Routes>
-                    <Route path="/coffee-house" element={<TodosPage/>}/>
+                    <Route path="/coffee-house" element={null}/>
                     <Route path="/coffee" element={<AboutPage/>}/>
                     <Route path="/your-pleasure" element={null}/>
+                    <Route path="/todo-list" element={<TodosPage/>}/>
                 </Routes>
             </div>
             <div className="footer">
