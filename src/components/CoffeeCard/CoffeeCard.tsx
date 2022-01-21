@@ -2,10 +2,9 @@ import React from "react";
 import {ICoffeeCardType} from "../../types/interfaces";
 import {PElement} from "../PElement/PElement";
 
-// @ts-ignore
-export const CoffeeCard: React.FC<ICoffeeCardType> = ({data}) => {
+export const CoffeeCard: React.FC<ICoffeeCardType> = (props) => {
 
-    const { image, title, description, price } = data;
+    const { image, title, description, price } = props;
     return (
         <div className="coffee-card-wrapper">
             <img src={image}></img>
