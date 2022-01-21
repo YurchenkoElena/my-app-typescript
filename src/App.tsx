@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import {IconImage} from "./components/IconsImage/IconImage";
 import {MainPage} from "./pages/MainPage";
 import {ForYourPage} from "./pages/ForYourPage";
+import {AboutCoffeePage} from "./pages/AboutCoffeePage";
 
 const App: React.FC = () => {
 
@@ -20,6 +21,7 @@ const App: React.FC = () => {
                     <Route path="/" element={<MainPage/>}/>
                     <Route path="/coffee-house" element={null}/>
                     <Route path="/coffee" element={<AboutPage/>}/>
+                    <Route path="/coffee/:title" element={<AboutCoffeePage/>} />
                     <Route path="/your-pleasure" element={<ForYourPage/>}/>
                 </Routes>
             </div>
