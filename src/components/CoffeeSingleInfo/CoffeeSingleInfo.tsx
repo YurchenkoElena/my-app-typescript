@@ -7,10 +7,19 @@ import aromisto from './../../images/cofee-image.jpg'
 import {Text} from "../Text/Text";
 import {Colors, SizesText} from "../../enums/enum";
 import {IconImage} from "../IconsImage/IconImage";
+import {useNavigate} from "react-router-dom";
+import {setCurrentCoffeeItem} from "../../redux/coffeeitem/coffeeitem";
+import {AboutPage} from "../../pages/AboutPage";
 
 export const CoffeeSingleInfo: React.FC<ICoffeeCardType> = (props) => {
 
+    const navigate = useNavigate();
+
     const {image, description, title, price, country} = props;
+
+    const handleRedirect = () => {
+        navigate(   `/coffee`, { replace: true });
+    }
 
     return (
         <div className="coffee-single-info">
