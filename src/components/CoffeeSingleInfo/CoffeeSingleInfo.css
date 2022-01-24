@@ -1,0 +1,31 @@
+.coffeeitem-page {
+    margin: 100px 200px;
+}
+
+.coffee-single-info {
+    display: flex;
+}
+
+.image-wrapper img {
+    box-shadow: 0 5px 21px 3px rgba(34, 60, 80, 0.45);
+}
+
+.coffeeitem-page  .coffee-card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.coffee-single-info .coffee-card-info {
+    width: 70%;
+}
+
+.coffee-card-info p {
+    width: 100%;
+    font-size: 20px;
+}
+
+.coffee-card-info span {
+    font-weight: 800;
+}

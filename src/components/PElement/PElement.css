@@ -4,10 +4,11 @@
 }
 
 .description {
-
+    text-align: justify;
 }
 
 .price {
     font-weight: 700;
     text-align: right;
+    margin-top: 0;
 }

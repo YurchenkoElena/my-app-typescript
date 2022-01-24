@@ -1,0 +1,23 @@
+.rating svg {
+      fill: #c7c7c7;
+      cursor: pointer;
+  }
+
+.rating div {
+      /*width: 120px;*/
+    text-align: right;
+  }
+
+.rating div:hover svg {
+    fill: rgb(212, 180, 0);
+    color: rgb(212, 180, 0);
+  }
+
+.rating svg:hover~svg {
+    color: #c7c7c7;
+    fill: #c7c7c7;
+  }
+
+.clickedstar {
+    fill: rgb(212, 180, 0)!important;
+}
