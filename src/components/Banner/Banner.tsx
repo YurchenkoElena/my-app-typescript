@@ -4,7 +4,7 @@ import {IconImage} from "../IconsImage/IconImage";
 import {Colors, SizesText, SizesTitle} from "../../enums/enum";
 import {Title} from "../Title/Title";
 import {Text} from "../Text/Text";
-import {Button} from "../Button/Button";
+import {Button} from "../Buttons/Button/Button";
 
 interface IBannerProps {
     src: string

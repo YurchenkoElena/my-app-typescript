@@ -1,0 +1,42 @@
+import React, {useContext, useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {OurCoffee} from "../components/OurCoffee/OurCoffee";
+import {Banner} from "../components/Banner/Banner";
+import {BlockTitleAndText} from "../components/BlockTitleAndText/BlockTitleAndText";
+import {Input} from "../components/Buttons/Input/Input";
+const imageMain = require("../images/coffee-shop.png")
+const image = require("../images/girl.jpg")
+const text = 'Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.\n' +
+    '\n' +
+    'Afraid at highly months do things on at. Situation recommend objection do intention\n' +
+    'so questions. \n' +
+    'As greatly removed calling pleased improve an. Last ask him cold feel\n' +
+    'met spot shy want. Children me laughing we prospect answered followed. At it went\n' +
+    'is song that held help face.'
+
+export const OurCoffeePage: React.FC = () => {
+
+        const[value, setValue] = useState('')
+
+   /* const Coffee = useContext(CoffeeContext);
+
+    const filteredCoffee = Coffee.filter(cofee =>{
+        return cofee.title.toLowerCase().includes(value.toLowerCase())
+    })*/
+
+    return (
+        <div className={'inside-page'}>
+           <Banner src={imageMain} text={'Our Coffee'} onlyTitle={true} isFront={false}/>
+            <BlockTitleAndText text={text} title={'About our beans'} hasImage={true} srcImage={image}/>
+            <div className={'filters container'}>
+                <form>
+                    <input placeholder={'Start typing here...'}
+                           type={text} id={'search'}
+                           onChange={(event)=>(setValue('vsdvsdv'))}
+                    />
+                </form>
+            </div>
+            <OurCoffee sliceSize={0}/>
+        </div>
+    )
+}

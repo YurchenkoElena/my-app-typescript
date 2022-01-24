@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useContext} from "react";
 import {getData} from "../../api/api";
 import {ICoffeeCardType} from "../../types/interfaces";
 import {CoffeeCard} from "../CoffeeCard/CoffeeCard";
