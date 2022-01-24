@@ -1,4 +1,4 @@
-const url = 'http://localhost:3003/datas.json';
+const url = 'http://localhost:3004/datas.json';
 
 export const getData = async () => {
         let res = await fetch(`${url}`);

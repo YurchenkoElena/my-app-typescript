@@ -13,4 +13,3 @@ export interface ICoffeeCardType {
     country: string,
     image: string
 }
-

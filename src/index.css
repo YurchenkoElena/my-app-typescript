@@ -86,3 +86,14 @@ code {
     font-family: 'Dancing Script', cursive;
 }
 
+.filters{
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.filters form{
+    width: 100%;
+}
+.filters form label{
+    font-size: 25px;
+}

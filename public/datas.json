@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "AROMISTICO Coffee 1 kg",
+    "title": "ARABICA Coffee 1 kg",
     "price": 11.90,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "country": "Brazil",
@@ -9,7 +9,7 @@
   },
  {
     "id": 2,
-    "title": "AROMISTICO Coffee 5 kg",
+    "title": "SUPER Coffee 5 kg",
     "price": 10.95,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "country": "Columbia",
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "title": "AROMISTICO Coffee 7 kg",
+    "title": "RABUSTA Coffee 7 kg",
     "price": 19.95,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "country": "Kenya",
@@ -33,7 +33,7 @@
   },
  {
     "id": 5,
-    "title": "AROMISTICO Coffee 8 kg",
+    "title": "GREAT Coffee 8 kg",
     "price": 90.00,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "country": "Kenya",
@@ -41,7 +41,7 @@
   },
   {
     "id": 6,
-    "title": "AROMISTICO Coffee 10 kg",
+    "title": "MAGNIFIC Coffee 10 kg",
     "price": 109.95,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "country": "Brazil",

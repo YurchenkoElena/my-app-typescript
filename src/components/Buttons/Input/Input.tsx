@@ -1,19 +1,20 @@
-import React from "react";
+import React, { ComponentProps }from "react"
 import './Input.css'
 
-interface IInputProps{
-    type: string
+interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>,HTMLInputElement> {
     id: string
-    placeholder: string
+    placeholder?: string
     label: string
+    name: string
+    type: string
 }
 
-export const Input: React.FC<IInputProps> = (props) => {
 
+export const Inputs: React.FC<InputProps> = (props) => {
     return (
         <>
             <label htmlFor={props.id}>{props.label}</label>
-            <input type={props.type} id={props.id} placeholder={props.placeholder}/>
+            <input onChange={props.onChange} name={props.name} type={props.type} id={props.id} placeholder={props.placeholder}/>
         </>
     )
 }

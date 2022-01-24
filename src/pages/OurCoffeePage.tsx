@@ -1,9 +1,7 @@
-import React, {useContext, useState} from "react";
-import {useNavigate} from "react-router-dom";
+import React, {useState} from "react";
 import {OurCoffee} from "../components/OurCoffee/OurCoffee";
 import {Banner} from "../components/Banner/Banner";
 import {BlockTitleAndText} from "../components/BlockTitleAndText/BlockTitleAndText";
-import {Input} from "../components/Buttons/Input/Input";
 const imageMain = require("../images/coffee-shop.png")
 const image = require("../images/girl.jpg")
 const text = 'Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.\n' +
@@ -16,27 +14,12 @@ const text = 'Extremity sweetness difficult behaviour he of. On disposal of as l
 
 export const OurCoffeePage: React.FC = () => {
 
-        const[value, setValue] = useState('')
-
-   /* const Coffee = useContext(CoffeeContext);
-
-    const filteredCoffee = Coffee.filter(cofee =>{
-        return cofee.title.toLowerCase().includes(value.toLowerCase())
-    })*/
 
     return (
         <div className={'inside-page'}>
            <Banner src={imageMain} text={'Our Coffee'} onlyTitle={true} isFront={false}/>
             <BlockTitleAndText text={text} title={'About our beans'} hasImage={true} srcImage={image}/>
-            <div className={'filters container'}>
-                <form>
-                    <input placeholder={'Start typing here...'}
-                           type={text} id={'search'}
-                           onChange={(event)=>(setValue('vsdvsdv'))}
-                    />
-                </form>
-            </div>
-            <OurCoffee sliceSize={0}/>
+            <OurCoffee needSearch={true} sliceSize={0}/>
         </div>
     )
 }
