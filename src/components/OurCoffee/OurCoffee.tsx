@@ -24,17 +24,31 @@ export const OurCoffee: React.FC<IOurCoffeeProps> = (props) => {
         setDates(results);
     }
 
+    const uniqueItems = dates.filter((item, pos, self) => self.findIndex(v => v.country === item.country) === pos);
+    const country:Array<string> = []
+    uniqueItems.forEach(element => country.push(element.country));
+
+
     useEffect(ourCoffeeBlock, []);
 
-    const [value, setValue] = useState('')
+    const [valueSearch, setValueSearch] = useState('')
 
-    const handleChange = (event: ChangeEvent<{ value: string }>) => {
-        setValue(event.target.value);
-        console.log(event)
+    const [valueFilter, setvalueFilter] = useState('')
+
+    const handleChangeSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setValueSearch(event.target.value);
+    }
+
+    const handleChangeFilter = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setvalueFilter(event.target.name);
     }
 
     const filteredCofee = dates.filter(coffee => {
-        return coffee.title.toLowerCase().includes(value.toLowerCase())
+        return coffee.title.toLowerCase().includes(valueSearch.toLowerCase())
+    })
+
+    const filteredCofee2 = dates.filter(coffee => {
+        return coffee.country.toLowerCase().includes(valueFilter.toLowerCase())
     })
 
 
@@ -49,31 +63,31 @@ export const OurCoffee: React.FC<IOurCoffeeProps> = (props) => {
                                         type={'text'} id={'search'}
                                         name={'search'}
                                         label={'Looking for...'}
-                                        onChange={handleChange}
+                                        onChange={handleChangeSearch}
+                                        value={valueSearch}
                                 />
                             </div>
-                            {/*    <div className={'radios'}>
-                        <input type="radio" value="Brazil" name="Brazil"/> Brazil
-                        <input type="radio" value="Columbia" name="Columbia"/> Columbia
-                        <input type="radio" value="Brazil" name="Brazil"/> Brazil
-                    </div>*/}
+                            <div className={'radios'}>
+                                {
+                                    country.map(c => <Inputs id={c} name={c} type={'checkbox'} label={c} onChange={handleChangeFilter} key={c} value={valueFilter}/>)
+                                }
+                            </div>
                         </form>
                     </div>
                     <div className={'container'}>
                         {
-                            //dates.map(data => <CoffeeCard key={data.id} {...data} />)
                             filteredCofee.map(data => <CoffeeCard key={data.id} {...data} />)
                         }
                     </div>
                 </>
             }
 
-            <div className={'container'}>
+            {!props.needSearch && <div className={'container'}>
                 {
-                    //dates.map(data => <CoffeeCard key={data.id} {...data} />)
                     dates.slice(props.sliceSize, dates.length).map(data => <CoffeeCard key={data.id} {...data} />)
                 }
             </div>
+            }
 
         </div>
     )

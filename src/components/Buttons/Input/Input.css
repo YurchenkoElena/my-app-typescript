@@ -1,0 +1,37 @@
+.radios input[type="checkbox"]:not(:checked),
+.radios input[type="checkbox"]:checked {
+    width: 100%;
+    height: 100%;
+    right: 0;
+    opacity: 0;
+}
+
+.radios {
+    width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.radios .input-buttons {
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 4px 0 0 4px;
+    margin-right: 15px;
+    padding: 10px;
+    transition: all 0.5s ease-in;
+}
+
+.radios .input-buttons:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 20px rgba(240, 0, 0, 0.44);
+    transition: all 0.5s ease-in;
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-buttons {
+    margin-right: 25px;
+    position: relative;
+}

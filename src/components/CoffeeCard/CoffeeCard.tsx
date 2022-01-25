@@ -10,7 +10,7 @@ export const CoffeeCard: React.FC<ICoffeeCardType> = (props) => {
 
     const dispatch = useDispatch();
 
-    const { id, image, title, description, price } = props;
+    const { id, image, title, description, price, country } = props;
 
     const navigate = useNavigate();
 
@@ -33,6 +33,7 @@ export const CoffeeCard: React.FC<ICoffeeCardType> = (props) => {
                 <PElement appointment='title'>{title}</PElement>
                 <PElement appointment='description'>{description}</PElement>
                 <Rating handleStop={handleStop}/>
+                <PElement appointment='price'>Country: {country}</PElement>
                 <PElement appointment='price'>{price} $</PElement>
             </div>
         </div>
