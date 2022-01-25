@@ -1,7 +1,7 @@
 import React from "react"
 import './Input.css'
 
-interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>,HTMLInputElement> {
+export interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>,HTMLInputElement> {
     id: string
     placeholder?: string
     label: string

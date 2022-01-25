@@ -2,6 +2,7 @@ import React, {useEffect, useState, ChangeEvent} from "react";
 import {getData} from "../../api/api";
 import {ICoffeeCardType} from "../../types/interfaces";
 import {CoffeeCard} from "../CoffeeCard/CoffeeCard";
+import {SearchFilters} from "../SearchFilters/SearchFilters";
 
 import './OurCoffee.css'
 import {Inputs} from "../Buttons/Input/Input";
@@ -20,19 +21,18 @@ export const OurCoffee: React.FC<IOurCoffeeProps> = (props) => {
             .then(onDatesLoaded)
     }
 
-    const onDatesLoaded = (results: any) => {
+    const onDatesLoaded = (results: Array<ICoffeeCardType>) => {
         setDates(results);
     }
 
     const uniqueItems = dates.filter((item, pos, self) => self.findIndex(v => v.country === item.country) === pos);
-    const country:Array<string> = []
+    const country: Array<string> = []
     uniqueItems.forEach(element => country.push(element.country));
 
 
     useEffect(ourCoffeeBlock, []);
 
     const [valueSearch, setValueSearch] = useState('')
-
     const [valueFilter, setvalueFilter] = useState('')
 
     const handleChangeSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -44,39 +44,31 @@ export const OurCoffee: React.FC<IOurCoffeeProps> = (props) => {
     }
 
     const filteredCofee = dates.filter(coffee => {
-        return coffee.title.toLowerCase().includes(valueSearch.toLowerCase())
+        return coffee.title.toLowerCase().includes(valueSearch.toLowerCase()) && coffee.country.toLowerCase().includes(valueFilter.toLowerCase())
     })
 
-    const filteredCofee2 = dates.filter(coffee => {
-        return coffee.country.toLowerCase().includes(valueFilter.toLowerCase())
-    })
 
+    const handleOnClick = (e: React.MouseEvent<HTMLElement>) => {
+        e.preventDefault()
+        setValueSearch('');
+        setvalueFilter('')
+    }
 
     return (
         <div className="our-coffee">
             {props.needSearch &&
                 <>
                     <div className={'filters container'}>
-                        <form>
-                            <div className={'search'}>
-                                <Inputs placeholder={'Start typing here...'}
-                                        type={'text'} id={'search'}
-                                        name={'search'}
-                                        label={'Looking for...'}
-                                        onChange={handleChangeSearch}
-                                        value={valueSearch}
-                                />
-                            </div>
-                            <div className={'radios'}>
-                                {
-                                    country.map(c => <Inputs id={c} name={c} type={'checkbox'} label={c} onChange={handleChangeFilter} key={c} value={valueFilter}/>)
-                                }
-                            </div>
-                        </form>
+
+                        <SearchFilters country={country} valueSearch={valueSearch} valueFilter={valueFilter}
+                                       handleChangeFilter={handleChangeFilter} handleChangeSearch={handleChangeSearch}
+                                       onClick={handleOnClick}/>
                     </div>
                     <div className={'container'}>
-                        {
+                        {filteredCofee.length
+                            ?
                             filteredCofee.map(data => <CoffeeCard key={data.id} {...data} />)
+                            : <h3 className={'no-matches'}>No matches found!</h3>
                         }
                     </div>
                 </>

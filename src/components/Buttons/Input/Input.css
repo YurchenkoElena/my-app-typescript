@@ -29,9 +29,24 @@
 form {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .input-buttons {
     margin-right: 25px;
     position: relative;
+}
+
+.clear-button{
+    height: 57px;
+    border: none;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    background-color: rgba(240, 0, 0, 0.44);
+    color: white;
+}
+
+.no-matches{
+    color: yellow;
+    background: black;
+    padding: 15px;
 }
