@@ -1,17 +1,16 @@
 import React from "react";
 import './Button.css'
-import {useNavigate} from "react-router-dom";
 
 interface IButtonProps {
     isTransparent: 'transparent' | 'white'
+    onClick? : (event: React.MouseEvent<HTMLButtonElement>) =>void
 }
 
-export const Button: React.FC<IButtonProps> = (props) => {
+export const ButtonCustom: React.FC<IButtonProps> = (props) => {
 
-    const history = useNavigate()
 
     return (
-        <button onClick={()=>{history('/your-pleasure')}} className={`button-${props.isTransparent}`}> {props.children}
+        <button onClick={props.onClick} className={`button-${props.isTransparent}`}> {props.children}
         </button>
     )
 }

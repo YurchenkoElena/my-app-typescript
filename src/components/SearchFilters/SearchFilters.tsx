@@ -6,7 +6,7 @@ interface ICountryProps {
     handleChangeSearch: (e: React.ChangeEvent<HTMLInputElement>) => void
     valueSearch: string
     handleChangeFilter: (e: React.ChangeEvent<HTMLInputElement>) => void
-    valueFilter:string
+    valueFilter: string
     onClick: (e: React.MouseEvent<HTMLElement>) => void
 }
 
@@ -25,8 +25,14 @@ export const SearchFilters: React.FC<ICountryProps> = (props) => {
             </div>
             <div className={'radios'}>
                 {
-                    props.country.map(c => <Inputs id={c} name={c} type={'checkbox'} label={c}
-                                                   onChange={props.handleChangeFilter} key={c} value={props.valueFilter}/>)
+                    props.country.map(c => <Inputs id={c}
+                                                   name={'countries'}
+                                                   type={'radio'}
+                                                   label={c}
+                                                   onChange={props.handleChangeFilter}
+                                                   key={c}
+                                                   value={c}
+                                                 />)
                 }
 
             </div>

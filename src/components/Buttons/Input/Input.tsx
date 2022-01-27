@@ -7,14 +7,16 @@ export interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttri
     label: string
     name: string
     type: string
-    value: string
+    value?: string
 }
 
 export const Inputs: React.FC<InputProps> = (props) => {
     return (
         <div className={'input-buttons'}>
-            <label htmlFor={props.id}>{props.label}</label>
+            <label htmlFor={props.id}>{props.label}
             <input onChange={props.onChange} name={props.name} type={props.type} id={props.id} placeholder={props.placeholder} value={props.value}/>
+            </label>
+            <div/>
         </div>
     )
 }

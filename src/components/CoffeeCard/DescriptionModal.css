@@ -1,0 +1,52 @@
+.coffee-card-info-modal {
+    position: absolute;
+    width: 300px;
+    background: white;
+    padding: 25px;
+    border: 1px solid red;
+    border-radius: 8px;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 5s ease;
+    height: 478px;
+}
+
+.coffee-card-info-modal.active {
+    transform: scaleY(1);
+    transition: transform 5s ease;
+}
+
+.coffee-card-info-modal p {
+    font-size: 20px;
+}
+
+.close-button {
+    font-size: 49px;
+    color: brown;
+    line-height: 33px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 22px;
+    top: 9px;
+}
+
+.close-button:hover {
+    cursor: pointer;
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}

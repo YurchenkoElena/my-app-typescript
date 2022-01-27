@@ -97,3 +97,26 @@ code {
 .filters form label{
     font-size: 25px;
 }
+
+.item-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-footer button{
+    font-size: 10px;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+}
+
+.background.active{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #a61e1e7d;
+    top: 0;
+    left: 0;
+}

@@ -31,6 +31,7 @@ const App: React.FC = () => {
                     <IconImage color={'black'}/>
                 </div>
             </div>
+            <div className={'background'}/>
         </Router>
     );
 }

@@ -1,5 +1,5 @@
-.radios input[type="checkbox"]:not(:checked),
-.radios input[type="checkbox"]:checked {
+.radios input[type="radio"]:not(:checked),
+.radios input[type="radio"]:checked {
     width: 100%;
     height: 100%;
     right: 0;
@@ -18,6 +18,7 @@
     margin-right: 15px;
     padding: 10px;
     transition: all 0.5s ease-in;
+    position: relative;
 }
 
 .radios .input-buttons:hover {
@@ -36,6 +37,17 @@ form {
     margin-right: 25px;
     position: relative;
 }
+
+.input-buttons input[type=radio]:checked + div{
+    box-shadow: 4px 4px 20px rgba(240, 0, 0, 0.44);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -50;
+}
+
 
 .clear-button{
     height: 57px;

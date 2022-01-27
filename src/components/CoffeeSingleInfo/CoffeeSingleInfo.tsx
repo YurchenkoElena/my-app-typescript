@@ -27,6 +27,7 @@ export const CoffeeSingleInfo: React.FC<ICoffeeCardType> = (props) => {
             <div className="coffee-card-info">
                 <Text size={SizesText.big} color={Colors.black} text={"About it"}/>
                 <IconImage color={'black'}/>
+                <h2>{title}</h2>
                 <PElement appointment='description'><span>Country: </span> {country}</PElement>
                 <PElement appointment='description'><span>Description: </span> {description}</PElement>
                 <PElement appointment='price'><span>Price: </span> {price} $</PElement>

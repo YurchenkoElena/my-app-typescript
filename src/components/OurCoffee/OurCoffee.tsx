@@ -1,4 +1,4 @@
-import React, {useEffect, useState, ChangeEvent} from "react";
+import React, {useEffect, useState} from "react";
 import {getData} from "../../api/api";
 import {ICoffeeCardType} from "../../types/interfaces";
 import {CoffeeCard} from "../CoffeeCard/CoffeeCard";
@@ -34,17 +34,16 @@ export const OurCoffee: React.FC<IOurCoffeeProps> = (props) => {
     const [valueFilter, setValueFilter] = useState('')
 
     const handleChangeSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setValueSearch(event.target.value);
+        setValueSearch(event.target.value)
     }
 
     const handleChangeFilter = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setValueFilter(event.target.name);
+        setValueFilter(event.target.value)
     }
 
     const filteredCofee = dates.filter(coffee => {
         return coffee.title.toLowerCase().includes(valueSearch.toLowerCase()) && coffee.country.toLowerCase().includes(valueFilter.toLowerCase())
     })
-
 
     const handleOnClick = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault()

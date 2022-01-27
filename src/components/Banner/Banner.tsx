@@ -4,7 +4,8 @@ import {IconImage} from "../IconsImage/IconImage";
 import {Colors, SizesText, SizesTitle} from "../../enums/enum";
 import {Title} from "../Title/Title";
 import {Text} from "../Text/Text";
-import {Button} from "../Buttons/Button/Button";
+import {ButtonCustom} from "../Buttons/Button/Button";
+import {useNavigate} from "react-router-dom";
 
 interface IBannerProps {
     src: string
@@ -14,6 +15,13 @@ interface IBannerProps {
 }
 
 export const Banner: React.FC<IBannerProps> = (props) => {
+
+
+    const history = useNavigate()
+
+    const handleClick = () => {
+        history('/your-pleasure')
+    }
 
     return (
         <div className="banner" style={{
@@ -39,11 +47,10 @@ export const Banner: React.FC<IBannerProps> = (props) => {
                         <Text
                             size={SizesText.big}
                             color={Colors.white}
-                            text={'We makes every day full of energy and taste\n' + '<br/>\n' + 'Want to try our beans?'}/>
-                        <Button isTransparent={'transparent'}>More</Button>
+                            text={'We make every day full of energy and taste. Want to try our beans?'}/>
+                        <ButtonCustom isTransparent={'transparent'} onClick={handleClick}>More</ButtonCustom>
                     </>
                 }
-
             </div>
         </div>
     )

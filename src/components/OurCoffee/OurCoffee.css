@@ -12,14 +12,14 @@
 
 .coffee-card-wrapper {
     width: 300px;
-    height: auto;
+    min-height: 470px;
     border-radius: 8px;
     margin-right: 70px;
     margin-bottom: 60px;
     box-shadow: 0 0 8px 6px rgba(34, 60, 80, 0.09);
     padding: 35px 25px;
     background: rgba(255, 255, 255, 0.65);
-    cursor: pointer;
+    position: relative;
 }
 
 @media screen and (max-width: 1500px) {
