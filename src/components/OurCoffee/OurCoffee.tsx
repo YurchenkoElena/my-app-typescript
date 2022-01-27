@@ -5,7 +5,6 @@ import {CoffeeCard} from "../CoffeeCard/CoffeeCard";
 import {SearchFilters} from "../SearchFilters/SearchFilters";
 
 import './OurCoffee.css'
-import {Inputs} from "../Buttons/Input/Input";
 
 interface IOurCoffeeProps {
     sliceSize: number,
@@ -24,23 +23,22 @@ export const OurCoffee: React.FC<IOurCoffeeProps> = (props) => {
     const onDatesLoaded = (results: Array<ICoffeeCardType>) => {
         setDates(results);
     }
+    useEffect(ourCoffeeBlock, []);
+
 
     const uniqueItems = dates.filter((item, pos, self) => self.findIndex(v => v.country === item.country) === pos);
     const country: Array<string> = []
     uniqueItems.forEach(element => country.push(element.country));
 
-
-    useEffect(ourCoffeeBlock, []);
-
     const [valueSearch, setValueSearch] = useState('')
-    const [valueFilter, setvalueFilter] = useState('')
+    const [valueFilter, setValueFilter] = useState('')
 
     const handleChangeSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
         setValueSearch(event.target.value);
     }
 
     const handleChangeFilter = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setvalueFilter(event.target.name);
+        setValueFilter(event.target.name);
     }
 
     const filteredCofee = dates.filter(coffee => {
@@ -51,7 +49,7 @@ export const OurCoffee: React.FC<IOurCoffeeProps> = (props) => {
     const handleOnClick = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault()
         setValueSearch('');
-        setvalueFilter('')
+        setValueFilter('')
     }
 
     return (
@@ -80,7 +78,6 @@ export const OurCoffee: React.FC<IOurCoffeeProps> = (props) => {
                 }
             </div>
             }
-
         </div>
     )
 }
