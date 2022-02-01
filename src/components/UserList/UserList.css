@@ -1,0 +1,18 @@
+.users-page {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.users-list {
+    width: 50%;
+    padding: 40px;
+    border: 1px solid brown;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+.user-name{
+    text-transform: uppercase;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import {ICoffeeCardType} from "../../types/interfaces";
+import {ICoffeeCardType} from "../../types/coffeCard/coffeCard";
 import {PElement} from "../PElement/PElement";
 import './CoffeeSingleInfo.css';
 import aromisto from './../../images/cofee-image.jpg'
@@ -7,22 +7,25 @@ import {Text} from "../Text/Text";
 import {Colors, SizesText} from "../../enums/enum";
 import {IconImage} from "../IconsImage/IconImage";
 import {useNavigate} from "react-router-dom";
+import {useTypedSelector} from "../../hooks/useTypedSelector";
 
 
-export const CoffeeSingleInfo: React.FC<ICoffeeCardType> = (props) => {
+export const CoffeeSingleInfo: React.FC= (props) => {
+
+    const coffee = useTypedSelector(state => state.coffeeCard);
 
     const navigate = useNavigate();
 
-    const {image, description, title, price, country} = props;
+    const {image, description, title, price, country} = coffee;
 
-    const handleRedirect = () => {
+   /* const handleRedirect = () => {
         navigate(   `/coffee`, { replace: true });
-    }
+    }*/
 
     return (
         <div className="coffee-single-info">
             <div className="image-wrapper">
-                <img src={aromisto} alt={'image'}/>
+                <img src={image} alt={'image'}/>
             </div>
             <div className="coffee-card-info">
                 <Text size={SizesText.big} color={Colors.black} text={"About it"}/>

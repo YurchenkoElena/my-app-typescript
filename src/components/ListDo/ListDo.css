@@ -1,0 +1,30 @@
+.todos-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.todoss{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.to-dos {
+    width: 50%;
+    padding: 40px;
+    border: 1px solid brown;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+.pagination-page{
+    padding: 10px;
+    margin-right: 15px;
+}
+.pagination-page:hover{
+    cursor: pointer;
+}
+
+.loading{
+   font-size: 45px;
+}

@@ -1,7 +1,7 @@
 import React from "react"
 import {PElement} from "../PElement/PElement"
-import {CSSTransition, TransitionGroup} from 'react-transition-group'
-import './DescriptionModal.css'
+import {CSSTransition} from 'react-transition-group'
+import './Description.css'
 
 type DescriptionModalType = {
     description: string
@@ -10,15 +10,14 @@ type DescriptionModalType = {
 };
 
 
-
-export const DescriptionModal: React.FC<DescriptionModalType> = (props) => {
+export const Description: React.FC<DescriptionModalType> = (props) => {
 
     return (
         <>
-
-                <CSSTransition
+            <CSSTransition
                 in={props.isVisible}
                 timeout={3000}
+                mountOnEnter
                 unmountOnExit
                 classNames="coffee-card-info-modal"
             >
@@ -26,13 +25,11 @@ export const DescriptionModal: React.FC<DescriptionModalType> = (props) => {
                 <div className="coffee-card-info-modal active">
                     <div className={'close-button'} onClick={props.controlModal}>
                         <img alt={'close'}
-                        src="http://www.vitorazevedo.net/external_files/loading_small.png"/>
+                             src="http://www.vitorazevedo.net/external_files/loading_small.png"/>
                     </div>
                     <PElement appointment='description'>{props.description}</PElement>
                 </div>
             </CSSTransition>
-
-
         </>
     )
 }

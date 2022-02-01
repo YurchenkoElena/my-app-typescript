@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {getData} from "../../api/api";
-import {ICoffeeCardType} from "../../types/interfaces";
+import {ICoffeeCardType} from "../../types/coffeCard/coffeCard";
 import {CoffeeCard} from "../CoffeeCard/CoffeeCard";
 import {SearchFilters} from "../SearchFilters/SearchFilters";
 
@@ -23,8 +23,8 @@ export const OurCoffee: React.FC<IOurCoffeeProps> = (props) => {
     const onDatesLoaded = (results: Array<ICoffeeCardType>) => {
         setDates(results);
     }
-    useEffect(ourCoffeeBlock, []);
 
+    useEffect(ourCoffeeBlock, []);
 
     const uniqueItems = dates.filter((item, pos, self) => self.findIndex(v => v.country === item.country) === pos);
     const country: Array<string> = []

@@ -6,6 +6,8 @@ import {IconImage} from "./components/IconsImage/IconImage";
 import {MainPage} from "./pages/MainPage";
 import {ForYourPage} from "./pages/ForYourPage";
 import {AboutCoffeePage} from "./pages/AboutCoffeePage";
+import {UsersPage} from "./pages/UsersPage";
+import {TodosPage} from "./pages/TodosPage";
 
 const App: React.FC = () => {
 
@@ -21,8 +23,10 @@ const App: React.FC = () => {
                     <Route path="/" element={<MainPage/>}/>
                     <Route path="/coffee-house" element={null}/>
                     <Route path="/coffee" element={<OurCoffeePage/>}/>
-                    <Route path="/coffee/:title" element={<AboutCoffeePage/>}/>
+                    <Route path="/coffee/:id" element={<AboutCoffeePage/>}/>
                     <Route path="/your-pleasure" element={<ForYourPage/>}/>
+                    <Route path="/users" element={<UsersPage/>}/>
+                    <Route path="/to-do" element={<TodosPage/>}/>
                 </Routes>
             </div>
             <div className="footer">

@@ -1,27 +1,28 @@
-import React, { useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useDispatch} from "react-redux";
-import {ICoffeeCardType} from "../../types/interfaces";
+import {ICoffeeCardType} from "../../types/coffeCard/coffeCard";
 import {PElement} from "../PElement/PElement";
 import {useNavigate} from "react-router-dom";
-import {setCurrentCoffeeItem} from "../../redux/coffeeitem/coffeeitem";
 import { Rating } from "../Rating/Rating";
 import {ButtonCustom} from "../Buttons/Button/Button";
-import {DescriptionModal} from "./DescriptionModal";
+import {Description} from "./Description";
+import {useActionsDispatch} from "../../hooks/useActions";
 
 
 export const CoffeeCard: React.FC<ICoffeeCardType> = (props) => {
 
     const[modalOpen, setModalOpen] = useState(false)
-    const dispatch = useDispatch();
 
-    const { image, title, description, price, country } = props;
+    const { image, title, description, price, country, id } = props;
 
     const navigate = useNavigate();
 
+    const {fetchCards} = useActionsDispatch()
+
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-        dispatch(setCurrentCoffeeItem(props))
+        fetchCards(id)
         event.preventDefault()
-        navigate(   `/coffee/${title}`, { replace: true })
+        navigate(   `/coffee/${id}`, { replace: true })
     }
 
     const handleClickModal = () => {
@@ -32,11 +33,9 @@ export const CoffeeCard: React.FC<ICoffeeCardType> = (props) => {
         setModalOpen(false)
     }
 
-
     const handleStop = (event: React.MouseEvent<HTMLElement>):void => {
         event.stopPropagation()
     }
-
 
     return (
             <div className="coffee-card-wrapper">
@@ -52,7 +51,7 @@ export const CoffeeCard: React.FC<ICoffeeCardType> = (props) => {
                     <ButtonCustom onClick={handleClick} isTransparent={'white'}>See more</ButtonCustom>
                     <button onClick={handleClickModal}>See description</button>
                 </div>
-               <DescriptionModal description={description} isVisible ={modalOpen} controlModal={handleClickModalClose}/>
+               <Description description={description} isVisible ={modalOpen} controlModal={handleClickModalClose}/>
             </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import {ITodoType} from "../../types/interfaces";
+import {ITodoType} from "../../types/coffeCard/coffeCard";
 
 type TodoListProps = {
     todos: ITodoType[]

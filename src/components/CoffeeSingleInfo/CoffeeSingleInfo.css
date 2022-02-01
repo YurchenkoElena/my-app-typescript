@@ -6,11 +6,20 @@
     display: flex;
 }
 
-.image-wrapper img {
-    box-shadow: 0 5px 21px 3px rgba(34, 60, 80, 0.45);
+.image-wrapper {
+    width: 400px;
+    height: 400px;
 }
 
-.coffeeitem-page  .coffee-card-info {
+.image-wrapper img {
+    box-shadow: 0 5px 21px 3px rgba(34, 60, 80, 0.45);
+    object-fit: cover;
+    object-position:center;
+    height: 100%;
+    width: 100%
+}
+
+.coffeeitem-page .coffee-card-info {
     display: flex;
     flex-direction: column;
     align-items: center;
